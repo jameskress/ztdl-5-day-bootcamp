@@ -54,9 +54,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 early_stop = EarlyStopping(monitor='mean_squared_error', patience=20, verbose=1)
 
-for x in range(1, 64):
-    for y in range(1, 64):
-        for z in range(1, 64):
+for x in range(2, 32):
+    for y in range(2, 32):
+        for z in range(2, 32):
             # create model
             model = Sequential()
             model.add(Dense(x, input_dim=X_train.shape[1], activation='relu'))
